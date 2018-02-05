@@ -5,6 +5,11 @@ import cv2 # import opencv
 # Set the number of frames to be captured.
 numFrames = 500
 
+# Set dir to save frames.
+rootDir = './'
+dir_left_frame = rootDir + 'left/'
+dir_right_frame = rootDir + 'right/'
+
 # set video format.
 camera_l = 0
 camera_r = 1
@@ -97,8 +102,8 @@ while(i > 0):
     #frame_l = cv2.resize(frame_l, (320,240))
     #frame_r = cv2.resize(frame_r, (320,240))
     
-    cv2.imwrite('/home/zhengj/Desktop/left/frame' + str(n) + '_l.jpg', frame_l)
-    cv2.imwrite('/home/zhengj/Desktop/right/frame' + str(n) + '_r.jpg', frame_r)
+    cv2.imwrite(dir_left_frame+'/frame' + str(n) + '_l.jpg', frame_l)
+    cv2.imwrite(dir_right_frame+'/frame' + str(n) + '_r.jpg', frame_r)
     n += 1
                 
     if cv2.waitKey(1) & 0xFF == ord('q'):
