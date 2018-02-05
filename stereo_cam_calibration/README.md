@@ -24,4 +24,4 @@ The figure below is the stereo camera calibration workflow using OpenCV. There a
 - 4) Get remap matrices. The projection matrices and rotation matrices, as well as the camera matrices and distortion coefficients, are input into the initUndistortRectifyMap function. This function outputs two remap matrices for each camera.  
 - 5) The original image with the remap matrices are input into remap function to get the rectified stereo image pairs.
 
-![](Stereo_Vision_Camera/stereo_cam_calibration/stereoVisonCalibrationFlowChart.png)
+![workflow](/Stereo_Vision_Camera/stereo_cam_calibration/stereoVisonCalibrationFlowChart.png)
