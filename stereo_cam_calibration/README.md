@@ -1,9 +1,9 @@
 # STEREO CAMERA CALIBRATION
 
-## DESCRIPTION
+## 1. DESCRIPTION
 This is stereo vision camera calibiration tool. It does not only calibrate each individual camera in stereo vision system, but also calibrate the two cameras as a whole system. The Chessborad method is used to rectify frames captured by stereo vision system. 
 
-## PROCEDURE
+## 2. PROCEDURE
 ### 1) Hardware Alignment
 To get best result from stereo vision system, the hardware alignment should be done properly before any software calibration. Please refer to [STEREO VISION CAMERA HARDWARE ALIGNMENT](/stereo_cam_hardware_alignment/README.md) to do hardware alignment before use this calibration tool.
 
@@ -16,7 +16,7 @@ Run generate_stereo_calibration_remap_parameters.py to get remap parapeters. The
 ### 4) Apply Remap Parameters to Original Frames to Get Rectified Frames.
 Run apply_stereo_calibration_remapping.py to get rectified frame. 
 
-## CALIBRATION WORKFLOW
+## 3. CALIBRATION WORKFLOW
 The figure below is the stereo camera calibration workflow using OpenCV. There are five main steps in this workflow. 
 - 1) Single camera calibration. The same object sets and two image sets captured by left and right cameras are input into the calibratCamera function. This function will calculate the camera matrix and distortion coefficients for each individual camera.  
 - 2) Calculate translation and rotation matrix for stereo camera system. The same object sets and two image sets, as well as the distortion coefficients and camera matrices are input into stereoCalibrate function. This function calculates the translation vector and rotation matrices between the two stereo cameras.  
@@ -25,3 +25,6 @@ The figure below is the stereo camera calibration workflow using OpenCV. There a
 - 5) The original image with the remap matrices are input into remap function to get the rectified stereo image pairs.
 
 ![workflow](stereoVisonCalibrationFlowChart.png)
+
+## 4. OUTPUT PARAMETERS
+There will be four parameters to be saved for a stereo vision camara. With these parameters, a raw frame pair captured by this stereo vision camara can be rectified. As long as the parameters of the hardware is unchanged, these remap parameters are valid.
