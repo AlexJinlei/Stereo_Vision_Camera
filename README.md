@@ -6,7 +6,13 @@ Stereo vision camera is widely used in depth detection and 3D reconstruction on 
 ### 1) Board Camera Module
 ELP-USBFHD01M-FV board camera.
 
-### 2) Supported Frame Format
+### 2) Baseline
+Baseline = 140mm
+
+### 3) Focal Length
+Focal Length = 4.35mm low distortion lens
+
+### 4) Supported Frame Format
 Pixel Format : MJPG  
 - 1) discrete 1920x1080 ( 30 fps) # Good. FPS=10.24. decode_time=58ms. Full hardward resolution. Largest view angle.
 - 2) discrete 1280x1024 ( 30 fps) # Good. FPS=15.66. decode_time=40ms. View angel is slightly larger than 320X240
@@ -25,8 +31,4 @@ Pixel Format : YUYV
 - 6) discrete  640x480  ( 30 fps) # FPS=29.83. decode_time=1.8ms. View angel is smaller than 320x240.
 - 7) discrete  320x240  ( 30 fps) # FPS=29.82. decode_time=0.8ms. View angel is equal to 1920x1080, white ballence differ too much.
 
-### 3) Baseline
-Baseline = 140mm
 
-### 4) Focal Length
-Focal Length = 4.35mm low distortion lens
