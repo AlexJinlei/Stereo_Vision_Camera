@@ -1,5 +1,5 @@
 '''
-0   CV_CAP_PROP_POS_MSEC Current position of the video file in milliseconds.
+0       CV_CAP_PROP_POS_MSEC Current position of the video file in milliseconds.
 1	CV_CAP_PROP_POS_FRAMES 0-based index of the frame to be decoded/captured next.
 2	CV_CAP_PROP_POS_AVI_RATIO Relative position of the video file
 3	CV_CAP_PROP_FRAME_WIDTH Width of the frames in the video stream.
