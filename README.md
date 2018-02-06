@@ -75,4 +75,15 @@ I developed a stereo vision calibration workflow based on opencv functions. Plea
 <img src="stereo_cam_calibration/output/compare_rectified_frame_pairs/frame111_rectified.jpg" width="600" />
 </p>
 
+### 3) Capture Frames and Calculate Depth Map.
+Your can either use package [stereo_cam_v4l2_python](stereo_cam_v4l2_python/) or package [stereo_cam_opencv](stereo_cam_opencv/) to capture stereo vision frame pairs and calculate depth map. Please refer to the comment in code for instructions on parameter setting. Following are captured frame pair and the corresponding depth map. In the depth map, the red color means a distance near to camera, and the blue color mean a distance far from the camera. With depth map, we are able to reconstruct the 3D map.
 
+<p align="center">
+<img src="README_PICS/bear_frame_pair.png" width="800" />
+Stereo Vision Camera Fram Pair
+</p>
+
+<p align="center">
+<img src="README_PICS/bear_depth_map.png" width="400" />
+Stereo Vision Camera Depth Map
+</p>
