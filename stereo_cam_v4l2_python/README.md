@@ -1,0 +1,1 @@
+# Stereo Vision Camera Class
