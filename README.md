@@ -18,7 +18,7 @@ The difference between xr and xl is called disparity. Eqn. (1) shows that the de
 ### 1) Stereo Vision Camera
 
 <p align="center">
-<img src="README_PICS/stereo_cam_assemble.jpg" width="60" />
+<img src="README_PICS/stereo_cam_assemble.jpg" width="600" />
 </p>
 
 ### 2) Board Camera Module
