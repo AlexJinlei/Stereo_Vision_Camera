@@ -7,6 +7,7 @@ If the images of an object are captured from two different points of view, the 3
 - (1) 𝑧 = (𝑓∙𝑏) / (𝑥𝑙 − 𝑥𝑟) = (𝑓∙𝑏) / 𝑑  
 - (2) 𝑥 = 𝑥 𝑙 ∙ (𝑧/𝑓)  
 - (3) 𝑦 = 𝑦 𝑙 ∙ (𝑧/𝑓)  
+![pic](README_PICS/stereo_vision_theory.png)
 
 ## 3. HARDWARE CONFIGURATION
 ### 1) Stereo Vision Camera
