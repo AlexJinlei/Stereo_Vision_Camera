@@ -38,3 +38,5 @@ Once the optical axes of the two cameras are well aligned, you will see in the d
 <p align="center">
   <img src="README_PICS/mis-aligned_in-aligned.jpg" width="800" />
 </p>
+
+Now your are done with the hardware alignment.
