@@ -82,7 +82,7 @@ Your can either use package [stereo_cam_v4l2_python](stereo_cam_v4l2_python/) or
 <img src="README_PICS/bear_frame_pair.png" width="800" />
 </p>
 <p align="center">
-Stereo Vision Camera Fram Pair
+Stereo Vision Camera Frame Pair
 </p>
 
 <p align="center">
