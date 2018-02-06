@@ -81,9 +81,13 @@ Your can either use package [stereo_cam_v4l2_python](stereo_cam_v4l2_python/) or
 <p align="center">
 <img src="README_PICS/bear_frame_pair.png" width="800" />
 </p>
+<p align="center">
 Stereo Vision Camera Fram Pair
+</p>
 
 <p align="center">
 <img src="README_PICS/bear_depth_map.png" width="400" />
 </p>
+<p align="center">
 Stereo Vision Camera Depth Map
+</p>
