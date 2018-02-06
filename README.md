@@ -16,7 +16,10 @@ The difference between xr and xl is called disparity. Eqn. (1) shows that the de
 
 ## 3. HARDWARE CONFIGURATION
 ### 1) Stereo Vision Camera
-![stereo_cam](pic/stereo_cam.jpg)
+
+<p align="center">
+<img src="README_PICS/stereo_cam_assemble.jpg" width="60" />
+</p>
 
 ### 2) Board Camera Module
 ELP-USBFHD01M-FV board camera.
