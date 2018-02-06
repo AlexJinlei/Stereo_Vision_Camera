@@ -72,7 +72,7 @@ I developed a cross laser calibration method to calibrate the roll and pitch of 
 I developed a stereo vision calibration workflow based on opencv functions. Please refer to [STEREO CAMERA CALIBRATION](stereo_cam_calibration/README.md) for detailed calibration procedure. The following figure shows the original frame pairs captured by stereo camera \(upper\) and the undistorted, rectified frame pairs to be used to generate depth map.
 
 <p align="center">
-<img src="output/compare_rectified_frame_pairs/frame111_rectified.jpg" width="600" />
+<img src="stereo_cam_calibration/output/compare_rectified_frame_pairs/frame111_rectified.jpg" width="600" />
 </p>
 
 
