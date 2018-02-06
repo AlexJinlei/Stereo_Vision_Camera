@@ -2,7 +2,7 @@ import cv2
 import os
 import sys
 #import v4l2 # This import the installed module.
-from MyPythonModule import v4l2 # This import the module from user folder. Python wrapper v4l2 API.
+from stereo_cam_v4l2_python import v4l2_API # This import the module from user folder. Python wrapper v4l2 API.
 from fcntl import ioctl
 import mmap
 import ctypes
