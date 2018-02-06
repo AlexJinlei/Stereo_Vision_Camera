@@ -3,7 +3,8 @@
 Stereo vision camera is widely used in depth detection and 3D reconstruction on a varies of places, such as UAVs and other robotics. In this project, I build a stereo vision camera system using two USB cameras which work with v4l2 standards. The is project contains the hardware built procedure, camera optical axis alignment method, image rectification procedure, and the real time depth map generation method.
 
 ## 2. THEORY OF STEREO VISION
-
+If the images of an object are captured from two different points of view, the 3D information can be derived from the disparity of the two images. We use a pinhole camera model to illustrate the theory of stereovision. Figure one is a stereovision system with two parallel cameras. The object point P is projected on the image plane of the two cameras. For left and right cameras, the position of image points of P is different. The xl is the distance between left camera axis and image of P on left camera image plane, and xr is the distance between the optical axis of right camera and image point of P on right camera image plane. f is the focal length of the two cameras. The distance between two optical axes is called baseline(b). It is notable that the length of xl and xr are different. The boxes equations are obtained from similar triangles. From these relations, the location of the 3D points in object space can be derived.
+𝑧= 𝑓∙𝑏 =𝑓∙𝑏 (1) 𝑥𝑙 − 𝑥𝑟 𝑑
 
 ## 3. HARDWARE CONFIGURATION
 ### 1) Stereo Vision Camera
