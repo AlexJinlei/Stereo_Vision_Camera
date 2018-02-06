@@ -3,6 +3,8 @@
 ## 1. DESCRIPTION
 This is stereo vision camera calibiration tool. It does not only calibrate each individual camera in stereo vision system, but also calibrate the two cameras as a whole system. The Chessborad method is used to rectify frames captured by stereo vision system. 
 
+Low cost USB board cameras introduce significant distortion. Besides choosing the right focal length, the camera calibration and image rectification process is needed before we use these images for positioning. The chessboard calibration method is widely used to calibrate cameras. OpenCV library has the build in function to correct the radial and tangential distortion. For a stereovision system with two cameras, we not only need to calibrate each individual camera, but also need to calibrate the stereo system. Because the stereovision algorithm is based on correspondence matching in an image pair, the correspondence points in two stereo images have to be aligned in the lines with same vertical pixel coordinate. The two stereo images have to be projected in the same image plane, and should be properly rectified according to the rotation and translation relations between the two cameras. To calculate the disparity and the depth, we also need the focal length and baseline. These parameters should be determined in the calibration process.
+
 ## 2. PROCEDURE
 ### 1) Hardware Alignment
 To get best result from stereo vision system, the hardware alignment should be done properly before any software calibration. Please refer to [STEREO VISION CAMERA HARDWARE ALIGNMENT](/stereo_cam_hardware_alignment/README.md) to do hardware alignment before use this calibration tool.
