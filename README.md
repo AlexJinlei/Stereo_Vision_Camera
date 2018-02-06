@@ -9,6 +9,7 @@ If the images of an object are captured from two different points of view, the 3
 - (3) 𝑦 = 𝑦 𝑙 ∙ (𝑧/𝑓)  
 
 ![pic](README_PICS/stereo_vision_theory.png)
+<img src="README_PICS/stereo_vision_theory.png" width="40" />
 
 The difference between xr and xl is called disparity. Eqn. (1) shows that the depth z is inversely proportional to disparity. This method of determining depth z from disparity d is called triangulation.
 
@@ -47,6 +48,8 @@ Pixel Format : YUYV
 - 5) discrete  800x600  ( 20 fps) # FPS=19.90. decode_time=2.7ms. Narrow.
 - 6) discrete  640x480  ( 30 fps) # FPS=29.83. decode_time=1.8ms. View angel is smaller than 320x240.
 - 7) discrete  320x240  ( 30 fps) # FPS=29.82. decode_time=0.8ms. View angel is equal to 1920x1080, white ballence differ too much.
+
+To get the real time 3D map in a varying environment, the time resolution is a critical parameter. Because acquiring stereo image pair and calculate depth map need time cost. When the depth map is obtained, the moving objects have changed the position. If the relative velocity of the object to drone is 45km/h (12.5m/s), to achieve a 0.5m spatial resolution, the time interval between two frames of image should be 0.04s. This corresponding frame rate is 25 frames per second (FPS). For a higher speed object, the higher FPS is required.
 
 ## 4. SOFTWARE CONFIGURATION
 This project uses two method to build the software of stereo vision camera system. One method is using the builtin functions in opencv to control the camera hardware. However, upon testing, some camera control functions is not well implemented in opencv. I developed a new software stack working around opencv. I use v4l2 API to control camera hardware directly. The code in folder [stereo_cam_opencv](stereo_cam_opencv/) is developed using opencv functions in python. The code in folder [stereo_cam_v4l2_c](stereo_cam_v4l2_c/) is developed using v4l2 API in c. The c code is a early phase test for v4l2 API, and I only implemented some functions to control camera parameters, no video recording function included. The code in folder [stereo_cam_v4l2_python](stereo_cam_v4l2_python/) is a fully developed package based on v4l2 API. It has camera control, video recording, stereo vision depth map generation functions. 
