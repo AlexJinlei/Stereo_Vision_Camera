@@ -56,8 +56,11 @@ Pixel Format : YUYV
 
 To get the real time 3D map in a varying environment, the time resolution is a critical parameter. Because acquiring stereo image pair and calculate depth map need time cost. When the depth map is obtained, the moving objects have changed the position. If the relative velocity of the object to drone is 45km/h (12.5m/s), to achieve a 0.5m spatial resolution, the time interval between two frames of image should be 0.04s. This corresponding frame rate is 25 frames per second (FPS). For a higher speed object, the higher FPS is required.
 
-## 4. SOFTWARE CONFIGURATION
+## 4. SOFTWARE IMPLEMENTATION
 This project uses two method to build the software of stereo vision camera system. One method is using the builtin functions in opencv to control the camera hardware. However, upon testing, some camera control functions is not well implemented in opencv. I developed a new software stack working around opencv. I use v4l2 API to control camera hardware directly. The code in folder [stereo_cam_opencv](stereo_cam_opencv/) is developed using opencv functions in python. The code in folder [stereo_cam_v4l2_c](stereo_cam_v4l2_c/) is developed using v4l2 API in c. The c code is a early phase test for v4l2 API, and I only implemented some functions to control camera parameters, no video recording function included. The code in folder [stereo_cam_v4l2_python](stereo_cam_v4l2_python/) is a fully developed package based on v4l2 API. It has camera control, video recording, stereo vision depth map generation functions. 
 
 ## 5. USAGE
+Before using the stereo vision camera code to create depth map, you need to do camera hardware alignment and software calibration.
+### 1) Camera Hardware Alignment.
+I developed a cross laser calibration method to calibrate the roll and pitch of two cameras. Please refer to [STEREO VISION CAMERA HARDWARE ALIGNMENT](stereo_cam_hardware_alignment/README.md) for more detail.
 
