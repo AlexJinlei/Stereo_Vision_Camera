@@ -9,7 +9,7 @@ If the images of an object are captured from two different points of view, the 3
 - (3) 𝑦 = 𝑦 𝑙 ∙ (𝑧/𝑓)  
 
 <p align="center">
-<img src="README_PICS/stereo_vision_theory.png" width="800" />
+<img src="README_PICS/stereo_vision_theory.png" width="600" />
 </p>
 
 The difference between xr and xl is called disparity. Eqn. (1) shows that the depth z is inversely proportional to disparity. This method of determining depth z from disparity d is called triangulation.
