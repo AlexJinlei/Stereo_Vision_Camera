@@ -62,11 +62,17 @@ This project uses two method to build the software of stereo vision camera syste
 ## 5. USAGE
 Before using the stereo vision camera code to create depth map, you need to do camera hardware alignment and software calibration.
 ### 1) Camera Hardware Alignment.
-I developed a cross laser calibration method to calibrate the roll and pitch of two cameras. Please refer to [STEREO VISION CAMERA HARDWARE ALIGNMENT](stereo_cam_hardware_alignment/) for more detail. The following figure shows the mis-aligned and in-aligned optical axes.
+I developed a cross laser calibration method to calibrate the roll and pitch of two cameras. Please refer to [STEREO VISION CAMERA HARDWARE ALIGNMENT](stereo_cam_hardware_alignment/) for more detail. The following figure shows the mis-aligned \(left\) and in-aligned optical \(right\) axes.
 
 <p align="center">
 <img src="stereo_cam_hardware_alignment/README_PICS/mis-aligned_in-aligned.jpg" width="800" />
 </p>
 
+### 2) Stereo Vision Calibration.
+I developed a stereo vision calibration workflow based on opencv functions. Please refer to [STEREO CAMERA CALIBRATION](stereo_cam_calibration/README.md) for detailed calibration procedure. The following figure shows the original frame pairs captured by stereo camera \(upper\) and the undistorted, rectified frame pairs to be used to generate depth map.
+
+<p align="center">
+<img src="output/compare_rectified_frame_pairs/frame111_rectified.jpg" width="600" />
+</p>
 
 
