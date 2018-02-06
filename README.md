@@ -7,7 +7,10 @@ If the images of an object are captured from two different points of view, the 3
 - (1) 𝑧 = (𝑓∙𝑏) / (𝑥𝑙 − 𝑥𝑟) = (𝑓∙𝑏) / 𝑑  
 - (2) 𝑥 = 𝑥 𝑙 ∙ (𝑧/𝑓)  
 - (3) 𝑦 = 𝑦 𝑙 ∙ (𝑧/𝑓)  
+
 ![pic](README_PICS/stereo_vision_theory.png)
+
+The difference between xr and xl is called disparity. Eqn. (1) shows that the depth z is inversely proportional to disparity. This method of determining depth z from disparity d is called triangulation.
 
 ## 3. HARDWARE CONFIGURATION
 ### 1) Stereo Vision Camera
@@ -17,10 +20,14 @@ If the images of an object are captured from two different points of view, the 3
 ELP-USBFHD01M-FV board camera.
 
 ### 3) Baseline
-Baseline = 140mm
+Baseline = 120mm
+
+The baseline is the distance between two camera’s optical axes. A short baseline stereovision system has larger overlapped visual area, which is able to detect the objects close to the camera. But the disparities at larger distance are too small to be distinguished. A larger baseline system has a larger detection range, but cannot detect the object that is close to camera. Besides that, the larger baseline system has to searching the larger range when execute the stereo matching algorithm, which needs more time and hardware resource, meanwhile, the mismatching probability will increase. It is important to choose a proper baseline to meet a specific requirement. The 12cm baseline system has a working range from 1m to 10m. This working range satisfies the requirement of a drone.
 
 ### 4) Focal Length
 Focal Length = 4.35mm low distortion lens
+
+The focal length is the distance between the lens and the image sensor when the subject is in focus. The short focal length lens has a large view angle, but will produce large distortion. The long focal length lens has a narrow view angle, but the distortion is small. The distortion will drastically reduce the accuracy of the depth map. A drone needs the large angle view to acquire a big scene of the environment, at the same time, it require an accurate depth map to get position information. In this project, we use 4.35mm low distortion lens.
 
 ### 5) Supported Frame Format
 Pixel Format : MJPG  
