@@ -16,6 +16,7 @@ The difference between xr and xl is called disparity. Eqn. (1) shows that the de
 
 ## 3. HARDWARE CONFIGURATION
 ### 1) Stereo Vision Camera
+I designed a stereo vision camera mount to install two camera modules on it. The pitch, yaw, and roll of the board camera module are adjustable. The plate connecting two cameras is made of carbon fiber, which is a rigid material resistanting bent.
 
 <p align="center">
 <img src="README_PICS/stereo_cam_assemble.jpg" width="600" />
